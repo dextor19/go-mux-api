@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"muxtemp/internal/db"
 	"muxtemp/internal/entity"
-	"net/http"
-	"github.com/gorilla/mux"
 	"muxtemp/pkg/log"
-	"go.uber.org/zap"
+	"net/http"
 	"time"
+
+	"github.com/gorilla/mux"
+	"go.uber.org/zap"
 )
 
 func CreateProduct(w http.ResponseWriter, r *http.Request) {
