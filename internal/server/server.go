@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"fmt"
@@ -16,9 +16,11 @@ import (
 	"gorm.io/gorm"
 )
 
-var DB *gorm.DB
+var (
+	DB *gorm.DB
+)
 
-func main() {
+func Start() {
 	log.New()
 	config.LoadAppConfig()
 	db.Connect(config.AppConfig.ConnectionString)

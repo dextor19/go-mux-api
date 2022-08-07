@@ -7,14 +7,15 @@ import (
 )
 
 type Config struct {
-	Port           string `mapstructure:"port"`
+	Port             string `mapstructure:"port"`
 	ConnectionString string `mapstructure:"connection_string"`
+	Version          string `mapstructure:"version"`
 }
 
 var AppConfig *Config
 
-func LoadAppConfig(){
-	log.Println("Loading Server Configurations...")
+func LoadAppConfig() {
+	log.Println("Loading Configurations...")
 	viper.AddConfigPath("config/")
 	viper.SetConfigName("config")
 	viper.SetConfigType("json")
